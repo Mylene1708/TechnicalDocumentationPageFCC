@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <title>jQuery Docummentation</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  </head>
+  
+  <body>
+    <nav id="navbar" tabindex="0">
+      <div class="smartphone-menu-trigger"></div>
+      <header>jQuery Documentation</header>
+      <ul>
+        <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+        <li><a href="#Why_jQuery" class="nav-link">Why jQuery</a></li>
+        <li><a href="#jQuery_syntax" class="nav-link">jQuery syntax</a></li>
+        <li><a href="#jQuery_selectors" class="nav-link">jQuery selectors</a></li>
+        <li><a href="#jQuery_events" class="nav-link">jQuery events</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section id="Introduction" class="main-section">
+        <header>Introduction</header>
+        <article>
+          <p>The purpose of jQuery is to make it much easier to use JavaScript on your website.</p>
+          <p>jQuery is a lightweight, "write less, do more", JavaScript library.</p>
+          <p>jQuery takes a lot of common tasks that require many lines of JavaScript code to accomplish, and wraps them into methods that you can call with a single line of code.</p>
+          <p>jQuery also simplifies a lot of the complicated things from JavaScript, like AJAX calls and DOM manipulation.</p>
+          <p>The jQuery library contains the following features :</p>
+          <ul>
+            <li>HTML/DOM manipulation</li>
+            <li>CSS manipulation</li>
+            <li>HTML event methods</li>
+            <li>Effects and animations</li>
+            <li>AJAX</li>
+            <li>Utilities</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="Why_jQuery" class="main-section">
+        <header>Why jQuery</header>
+        <article>
+          <p>There are lots of other JavaScript frameworks out there, but jQuery seems to be the most popular, and also the most extendable.</p>
+          <p>Many of the biggest companies on the Web use jQuery, such as :</p>
+          <ul>
+            <li>Google</li>
+            <li>Microsoft</li>
+            <li>IBM</li>
+            <li>Netflix</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="jQuery_syntax" class="main-section">
+        <header>jQuery syntax</header>
+        <article>
+          <p>The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).</p>
+          <p>Basic syntax is : </p>
+            <code>$(selector).action()</code>
+          <ul>
+            <li>A $ sign to define/access jQuery</li>
+            <li>A (selector) to "query (or find)" HTML elements</li>
+            <li>A jQery action() to be performed on the element(s)</li>
+          </ul>
+          <p>Exemples :</p>
+          <code>$(this).hide() // hides the current element</code>
+        </article>
+      </section>
+
+      <section id="jQuery_selectors" class="main-section">
+        <header>jQuery selectors</header>
+        <p>jQuery selectors allow you to select and manipulate HTML element(s).</p>
+        <p>jQuery selectors are used to "find" (or select) HTML elements based on their name, id, classes, types, attributes, values of attributes and much more. It's based on the existing CSS Selectors, and in addition, it has some own custom selectors.</p>
+        <p>All selectors in jQuery start with the dollar sign and parentheses :</p>
+        <code>$()</code>
+        <p>When a user clicks on a button, all p elements will be hidden :</p>
+
+          <code>$(document).ready(function(){
+                  $("button").click(function(){
+                    $("p").hide();
+                  });
+                });   
+          </code>
+
+      </section>
+
+      <section id="jQuery_events" class="main-section">
+        <header>jQuery events</header>
+        <p>All the different visitors' actions that a web page can respond to are called events.</p>
+        <p>An event represents the precise moment when something happens.</p>
+        <p>Examples :</p>
+        <ul>
+          <li>moving a mouse over an element</li>
+          <li>selecting a radio button</li>
+          <li>clicking on an element</li>
+        </ul>
+        <p>Example</p>
+        <code>$("p").dblclick(function(){
+      $(this).hide();
+    });</code>
+      </section>
+    </main>
+  </body>

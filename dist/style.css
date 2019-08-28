@@ -1,0 +1,135 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+code {
+  font-size: 0.875em;
+  background-color: #f1f1f1;
+  padding: 15px;
+  border-radius: 5px;
+  display: block;
+  margin: 10px;
+  white-space: pre;
+}
+
+pre {
+  margin: 0;
+}
+
+#navbar {
+  position: fixed;
+  height: 100%;
+  width: 300px;
+  background: #f1f1f1;
+  top: 0px;
+  left: 0px;
+}
+
+#navbar header {
+  font-size: 2em;
+  font-weight: 600;
+  margin: 20px 0;
+  padding: 15px;
+  line-height: 35px;
+}
+
+#navbar ul {
+  height: 60%;
+  list-style-type: none;
+  padding-left: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#navbar ul li {
+  padding: 18px 22px;
+  border-top: 1px solid grey;
+}
+
+#navbar ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.125em;
+}
+
+#main-doc {
+  position: absolute;
+  top: 0;
+  left: 335px;
+  padding: 45px 20px;
+}
+
+.main-section {
+  margin-bottom: 50px;
+}
+
+.main-section header {
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 1.500em;
+}
+
+@media screen and (max-width: 800px) {
+  :focus {
+    outline: none;
+  }
+  
+  #navbar {
+    width: 230px;
+    transform: translate3d(-230px, 0, 0);
+    box-shadow: 0 0 0 100em rgba(0, 0, 0, 0);
+    transition: all 0.3s ease-in-out;
+    z-index: 5;
+  }
+  
+  #navbar:focus {
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 0 0 100em rgba(0, 0, 0, 0.6);
+  }
+  
+  #navbar:focus.smartphone-menu-trigger {
+    pointer-events: none;
+  }
+  
+  #navbar header {
+    font-size: 1.250em;
+  }
+  
+  .smartphone-menu-trigger {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 122%;
+    background: #000;
+  }
+  
+  .smartphone-menu-trigger::before, .smartphone-menu-trigger::after {
+    content: '';
+    width: 50%;
+    height: 2px;
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  
+  .smartphone-menu-trigger::after {
+    top: 55%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+ 
+  #main-doc {
+    left: 0;
+  }
+  
+}
